@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>第一篇博客 · azy&#39;s blooooog</title>
+    <title>简单的gcc和cmd命令 · azy&#39;s blooooog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >azy&#39;s blo0o0o0o0g</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">第一篇博客</a>
+                <a href="#" class="post-name">简单的gcc和cmd命令</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            第一篇博客
+            简单的gcc和cmd命令
             <!-- 404 -->
             
         </h1>
@@ -266,12 +266,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">39</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">518</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/07/27</span>
+                    <span class="post-intro-time">2019/07/29</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,9 +395,66 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="完成搭建小博客的感受"><a href="#完成搭建小博客的感受" class="headerlink" title="完成搭建小博客的感受"></a>完成搭建小博客的感受</h2><p>佛了，建个小博客都好累。<br><font color="red" size="28">好好学习，天天向上</font></p>
+        <h2 id="gcc："><a href="#gcc：" class="headerlink" title="gcc："></a><font color="red">gcc</font>：</h2><h3 id="常用的编译命令："><a href="#常用的编译命令：" class="headerlink" title="常用的编译命令："></a><font color="green">常用的编译命令</font>：</h3><ul>
+<li>-E：只进行预处理，不编译；</li>
+<li>-S：只编译，不汇编；</li>
+<li>-c: 只编译、汇编，不链接；</li>
+<li>-g: 包含调试信息；</li>
+<li>-I: 指定include包含文件的搜索目录；</li>
+<li>-o: 输出成指定文件名；<h3 id="高级选项命令："><a href="#高级选项命令：" class="headerlink" title="高级选项命令："></a><font color="green">高级选项命令</font>：</h3></li>
+<li>-v：详细输出编译过程中所采用的每一个选项；</li>
+<li>-C：预处理时保留注释信息；</li>
+<li>-ggdb：在可执行文件中包含可供GDB使用的调试信息；</li>
+<li>-fverbose-asm：在编译成汇编语言时，把C变量的名称作为汇编语言中的注释；</li>
+<li>-save-temps：自动输出预处理文件、汇编文件、对象文件，编译正常进行；</li>
+<li>-fsyntax-only：只测试源文件语法是否正确，不会进行任何编译操作；</li>
+<li>-ffreestanding：编译成独立程序，而非宿主程序；<h3 id="语言标准命令："><a href="#语言标准命令：" class="headerlink" title="语言标准命令："></a><font color="green">语言标准命令</font>：</h3></li>
+<li>-ansi：ANSI标准；</li>
+<li>-std=c99：C99标准；</li>
+<li>-std=gnu89：ISO/IEC 9899:1990 以及GNU扩充；</li>
+<li>-std=gnu99：ISO/IEC 9899:1999 以及GNU扩充；</li>
+<li>-trigraphs：支持ISO C三字符组；<h3 id="错误命令："><a href="#错误命令：" class="headerlink" title="错误命令："></a><font color="green">错误命令</font>：</h3></li>
+<li>-w：忽略所有警告；</li>
+<li>-Werror：不区分警告和错误，遇到任何警告都停止编译；</li>
+<li>-Wall：开启大部分警告提示；</li>
+<li>-Wshadow：某语句块作用域变量与更大作用域的另一变量同名时发出警告（此警告未包含在Wall选项中，需单独开启）；</li>
+<li>-Wextra：对所有合法但值得怀疑的表达式发出警告；<h2 id="cmd："><a href="#cmd：" class="headerlink" title="cmd："></a><font color="red">cmd</font>：</h2></li>
+</ul>
+<ol>
+<li><font color="green">终端命令执行</font>：</li>
+</ol>
+<ul>
+<li>Ctrl+Z;</li>
+</ul>
+<ol start="2">
+<li><font color="green">文件/目录</font>:</li>
+</ol>
+<ul>
+<li>cd: 切换目录；</li>
+<li>dir：查看目录内容；</li>
+<li>tree: 查看目录结构；</li>
+<li>ren：文件、目录重命名；</li>
+<li>md：创建目录；</li>
+<li>rd：删除目录；</li>
+<li>move：移动文件；</li>
+<li>del： 删除文件；</li>
+<li>copy：拷贝文件；</li>
+<li>replace：替换文件；</li>
+<li>type：查看文本文件内容；</li>
+</ul>
+<ol start="3">
+<li><font color="green">其他</font>:</li>
+</ol>
+<ul>
+<li>time：显示/设置当前时间；</li>
+<li>date：显示/设置当前日期；</li>
+<li>cls：清除屏幕；</li>
+<li>start：运行某种程序或命令；</li>
+<li>exit：退出当前cmd窗口；</li>
+<li>color：设置窗口颜色和背景色；</li>
+</ul>
 <blockquote>
-<p>这个小博客网站基于github和hexo。</p>
+<p>gcc命令代码参考来自<a href="https://blog.csdn.net/junmuzi/article/details/50924233" target="_blank" rel="noopener">这篇博客</a><br>cmd命令代码参考来自<a href="https://blog.csdn.net/qq_32451373/article/details/77743869" target="_blank" rel="noopener">这篇博客</a></p>
 </blockquote>
 
     </article>
@@ -407,13 +464,13 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/07/29/2nd blog/" title= "简单的gcc和cmd命令">
-                    <div class="nextTitle">简单的gcc和cmd命令</div>
-                </a>
-            
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/07/27/1st blog/" title= "第一篇博客">
+                    <div class="prevTitle">第一篇博客</div>
+                </a>
             
         </li>
     </ul>
@@ -524,7 +581,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#完成搭建小博客的感受"><span class="toc-number">1.</span> <span class="toc-text">完成搭建小博客的感受</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#gcc："><span class="toc-number">1.</span> <span class="toc-text">gcc：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用的编译命令："><span class="toc-number">1.1.</span> <span class="toc-text">常用的编译命令：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高级选项命令："><span class="toc-number">1.2.</span> <span class="toc-text">高级选项命令：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语言标准命令："><span class="toc-number">1.3.</span> <span class="toc-text">语言标准命令：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#错误命令："><span class="toc-number">1.4.</span> <span class="toc-text">错误命令：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cmd："><span class="toc-number">2.</span> <span class="toc-text">cmd：</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
