@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >azy&#39;s blo0o0o0o0g</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name"></a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>azy's blo0o0o0o0g</a>
 </header>
@@ -220,24 +231,68 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/123.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            [Untitled Post]
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">243</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/08/02</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,72 +393,71 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/29/2nd blog/" >
-            
-                <span>简单的gcc和cmd命令</span>
-        </a>
-        <div class="abstract-content">
-            gcc：常用的编译命令：
--E：只进行预处理，不编译；
--S：只编译，不汇编；
--c: 只编译、汇编，不链接；
--g: 包含调试信息；
--I: 指定include包含文件的搜索目录；
--o: 输出成指定文件名；高级选项命令：
--v：详细输出编译过程中所采用的每一个选项；
--C：预处理时保留注释信息；
--ggdb：在可执行文件中包含可供GDB使用的调试信息；
--fverbose-asm：在编译成汇编语言时，把C变量的名称作为汇编语言中的注释；
--save-temps：自动输出预处理文件、汇编文件、对象文件，编译正常进行；
--fsyntax-only：只测试源文件语法是否正确，不会进行任何编...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/29</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <hr>
+<h2 id="title：关于C语言-h文件的总结"><a href="#title：关于C语言-h文件的总结" class="headerlink" title="title：关于C语言.h文件的总结"></a>title：关于C语言.h文件的总结</h2><h2 id="C中-h文件"><a href="#C中-h文件" class="headerlink" title="C中.h文件"></a>C中.h文件</h2><h3 id="格式："><a href="#格式：" class="headerlink" title="格式："></a>格式：</h3><pre>
+#ifndef _TEST_H//与文件名一致
+#define _TEST_H//防止重复引用头文件，使用if no define,define......endif
+
+/*头文件内容*/ 
+
+#endif
+</pre>
+<h3 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h3><p>与其他文件放在同一目录下，.c文件在当前目录下引用头文件可写为：</p>
+<pre>
+#define "test.h"
+</pre>
+<h3 id="include-lt-gt-与-include“”的区别："><a href="#include-lt-gt-与-include“”的区别：" class="headerlink" title="#include&lt;&gt;与#include“”的区别："></a>#include&lt;&gt;与#include“”的区别：</h3><p>#include&lt;&gt;直接在系统指定的库中查找头文件。\</p>
+<p>#include“”现在当前目录中查找头文件，找不到才会去系统指定的库中查找头文件。</p>
+<h3 id="其他："><a href="#其他：" class="headerlink" title="其他："></a>其他：</h3><p>C与C++混合编译时可以使用这样的头文件内容来让两部分内容按照C的编译方式进行：</p>
+<pre>
+#ifndef _TEST_H
+#define _TEST_H
+#ifdef __cplusplus             //告诉编译器，这部分代码按C语言的格式进行编译，而不是C++的  
+extern "C"{ 
+    #endif 
+     /*头文件内容*/ 
+    #ifdef __cplusplus  
+ } 
+ #endif 
+ #endiF
+ </pre>
+<blockquote>
+<p>部分参考来自<a href="https://blog.csdn.net/jiqiren007/article/details/5933599" target="_blank" rel="noopener">这篇博客</a><br>部分参考来自<a href="https://blog.csdn.net/lingfeng2019/article/details/69568685" target="_blank" rel="noopener">这篇博客</a></p>
+</blockquote>
+
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/27/1st blog/" >
-            
-                <span>第一篇博客</span>
-        </a>
-        <div class="abstract-content">
-            完成搭建小博客的感受佛了，建个小博客都好累。好好学习，天天向上
-
-这个小博客网站基于github和hexo。
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/27</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/07/29/2nd blog/" title= "简单的gcc和cmd命令">
+                    <div class="prevTitle">简单的gcc和cmd命令</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -481,6 +535,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title：关于C语言-h文件的总结"><span class="toc-number">1.</span> <span class="toc-text">title：关于C语言.h文件的总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C中-h文件"><span class="toc-number">2.</span> <span class="toc-text">C中.h文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#格式："><span class="toc-number">2.1.</span> <span class="toc-text">格式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用法："><span class="toc-number">2.2.</span> <span class="toc-text">用法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#include-lt-gt-与-include“”的区别："><span class="toc-number">2.3.</span> <span class="toc-text">#include&lt;&gt;与#include“”的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他："><span class="toc-number">2.4.</span> <span class="toc-text">其他：</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -638,6 +710,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

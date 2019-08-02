@@ -346,56 +346,32 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/29/2nd blog/" >
+        <a class="abstract-title" href = "/2019/08/02/3rd_blog/" >
             
-                <span>简单的gcc和cmd命令</span>
+                <span>[Untitled Post]</span>
         </a>
         <div class="abstract-content">
-            gcc：常用的编译命令：
--E：只进行预处理，不编译；
--S：只编译，不汇编；
--c: 只编译、汇编，不链接；
--g: 包含调试信息；
--I: 指定include包含文件的搜索目录；
--o: 输出成指定文件名；高级选项命令：
--v：详细输出编译过程中所采用的每一个选项；
--C：预处理时保留注释信息；
--ggdb：在可执行文件中包含可供GDB使用的调试信息；
--fverbose-asm：在编译成汇编语言时，把C变量的名称作为汇编语言中的注释；
--save-temps：自动输出预处理文件、汇编文件、对象文件，编译正常进行；
--fsyntax-only：只测试源文件语法是否正确，不会进行任何编...
+            
+title：关于C语言.h文件的总结C中.h文件格式：
+#ifndef _TEST_H//与文件名一致
+#define _TEST_H//防止重复引用头文件，使用if no define,define......endif
+
+/*头文件内容*/ 
+
+#endif
+
+用法：与其他文件放在同一目录下，.c文件在当前目录下引用头文件可写为：
+
+#define "test.h"
+
+#include&lt;&gt;与#include“”的区别：#include&lt;&gt;直接在系统指定的库中查找头文件。\
+#include“”现在当前目录中查找头文件，找不到才会去系统指定的库中查找头文件。
+...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/29</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/27/1st blog/" >
-            
-                <span>第一篇博客</span>
-        </a>
-        <div class="abstract-content">
-            完成搭建小博客的感受佛了，建个小博客都好累。好好学习，天天向上
-
-这个小博客网站基于github和hexo。
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/27</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/02</span>
             </div>
             <!-- tags  -->
             
